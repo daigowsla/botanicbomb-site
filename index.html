@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#d25f5a">
+  <meta name="description" content="Botanic Bombのゲーム入口ページです。">
+  <meta property="og:title" content="BOTANIC BOMB">
+  <meta property="og:description" content="ボタボムバッジゲームをプレイできます。">
+  <meta property="og:image" content="image.png">
+  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <title>BOTANIC BOMB</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #231b18;
+      --paper: #fff6e8;
+      --accent: #d25f5a;
+      --leaf: #2d6f2a;
+      --gold: #f7c84b;
+      --line: rgba(35, 27, 24, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        linear-gradient(rgba(255, 246, 232, 0.88), rgba(255, 246, 232, 0.88)),
+        radial-gradient(circle at 18% 14%, rgba(45, 111, 42, 0.20), transparent 24%),
+        radial-gradient(circle at 86% 82%, rgba(247, 200, 75, 0.24), transparent 28%),
+        #f4dfc4;
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      letter-spacing: 0;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: max(18px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+    }
+
+    main {
+      width: min(100%, 430px);
+      display: grid;
+      gap: 18px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      width: min(100%, 320px);
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 16px 40px rgba(35, 27, 24, 0.16);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 11vw, 56px);
+      line-height: 0.92;
+      font-weight: 950;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 28em;
+      color: rgba(35, 27, 24, 0.72);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .button {
+      display: grid;
+      place-items: center;
+      min-height: 52px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 12px 24px rgba(210, 95, 90, 0.28);
+    }
+
+    .sub-link {
+      font-size: 13px;
+      color: rgba(35, 27, 24, 0.64);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      font-size: 11px;
+      color: rgba(35, 27, 24, 0.48);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="image.png" alt="BOTANIC BOMB">
+    <h1>BOTANIC BOMB</h1>
+    <p>ボタニックなキャラクターたちがころころ育つ、ブラウザで遊べるミニゲーム。</p>
+    <div class="actions">
+      <a class="button" href="https://game.botanicbomb.jp/">PLAY GAME</a>
+      <a class="sub-link" href="https://game.botanicbomb.jp/">ボタボムバッジゲームへ</a>
+    </div>
+    <footer>© BOTANIC BOMB</footer>
+  </main>
+</body>
+</html>
