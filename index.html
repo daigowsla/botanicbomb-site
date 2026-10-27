@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#d25f5a">
+  <meta name="theme-color" content="#CE5E5A">
   <meta name="description" content="BOTANICBOMBのゲーム入口ページです。">
   <meta property="og:title" content="BOTANICBOMB">
   <meta property="og:description" content="ボタボムバッジゲームをプレイできます。">
@@ -30,11 +30,7 @@
     body {
       margin: 0;
       min-height: 100%;
-      background:
-        linear-gradient(rgba(255, 246, 232, 0.88), rgba(255, 246, 232, 0.88)),
-        radial-gradient(circle at 18% 14%, rgba(45, 111, 42, 0.20), transparent 24%),
-        radial-gradient(circle at 86% 82%, rgba(247, 200, 75, 0.24), transparent 28%),
-        #f4dfc4;
+      background: #CE5E5A;
       color: var(--ink);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
       letter-spacing: 0;
@@ -58,7 +54,6 @@
       width: min(100%, 320px);
       margin: 0 auto;
       border-radius: 8px;
-      box-shadow: 0 16px 40px rgba(35, 27, 24, 0.16);
     }
 
     h1 {
@@ -98,6 +93,7 @@
     }
 
     .social-links {
+      flex-wrap: wrap;
       display: flex;
       justify-content: center;
       gap: 16px;
@@ -137,28 +133,42 @@
       stroke-linejoin: round;
     }
 
+    .since {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
     footer {
       font-size: 11px;
-      color: rgba(35, 27, 24, 0.48);
+      color: #000000;
     }
   </style>
 </head>
 <body>
   <main>
     <img class="logo" src="image.png" alt="BOTANICBOMB">
-    <h1>BOTANICBOMB</h1>
+    <div class="brand">
+      <h1>BOTANICBOMB</h1>
+      <p class="since">SINCE ２０１９</p>
+    </div>
     <div class="actions">
+      <p><a href="https://note.com/botanicbomb">ボタニックボムについて</a></p>
+      <a class="icon-link" style="justify-self: center;" href="https://note.com/botanicbomb" aria-label="BOTANICBOMBのnoteへ" title="note">
+          <span aria-hidden="true" style="font-size: 14px; font-weight: 800; letter-spacing: -0.5px;">note</span>
+        </a>
       <nav class="social-links" aria-label="ゲーム・SNS・ショップ">
-        <!-- URLが決まったらspanをaに変更し、hrefを設定してください。 -->
-        <span class="icon-link" role="link" aria-disabled="true" aria-label="Instagram（準備中）" title="Instagram（準備中）">
+        <a class="icon-link" href="https://www.instagram.com/botanicbomb/?hl=ja" aria-label="BOTANICBOMBのInstagramへ" title="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </span>
-        <span class="icon-link" role="link" aria-disabled="true" aria-label="YouTube（準備中）" title="YouTube（準備中）">
+        </a>
+        <a class="icon-link" href="https://www.youtube.com/@botanicbomb" aria-label="BOTANICBOMBのYouTubeチャンネルへ" title="YouTube">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg>
-        </span>
-        <span class="icon-link" role="link" aria-disabled="true" aria-label="オンラインショップ（準備中）" title="オンラインショップ（準備中）">
+        </a>
+        <a class="icon-link" href="https://botanicbomb.base.shop/" aria-label="オンラインショップへ" title="オンラインショップ">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h3l2.5 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
-        </span>
+        </a>
         <a class="icon-link" href="https://game.botanicbomb.jp/" aria-label="ボタボムバッジゲームへ" title="ボタボムバッジゲーム">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 7h9c2 0 3 1.5 3.5 3.5l1 5c.5 2.5-1.8 3.8-3.5 2L15 15H9l-2.5 2.5c-1.7 1.8-4 .5-3.5-2l1-5C4.5 8.5 5.5 7 7.5 7Z"/><path d="M7 10v4m-2-2h4"/><circle cx="16" cy="10.5" r=".75" fill="currentColor" stroke="none"/><circle cx="18" cy="13" r=".75" fill="currentColor" stroke="none"/></svg>
         </a>
