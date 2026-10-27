@@ -97,11 +97,44 @@
       box-shadow: 0 12px 24px rgba(210, 95, 90, 0.28);
     }
 
-    .sub-link {
-      font-size: 13px;
-      color: rgba(35, 27, 24, 0.64);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 8px;
+    }
+
+    .icon-link {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      color: var(--ink);
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    a.icon-link:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    .icon-link:focus-visible {
+      outline: 3px solid var(--leaf);
+      outline-offset: 4px;
+    }
+
+    .icon-link svg {
+      width: 25px;
+      height: 25px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     footer {
@@ -117,7 +150,21 @@
     <p>ボタボムのキャラクターバッジで遊べるミニゲーム。</p>
     <div class="actions">
       <a class="button" href="https://game.botanicbomb.jp/">PLAY GAME</a>
-      <a class="sub-link" href="https://game.botanicbomb.jp/">ボタボムバッジゲームへ</a>
+      <nav class="social-links" aria-label="ゲーム・SNS・ショップ">
+        <!-- URLが決まったらspanをaに変更し、hrefを設定してください。 -->
+        <span class="icon-link" role="link" aria-disabled="true" aria-label="Instagram（準備中）" title="Instagram（準備中）">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="icon-link" role="link" aria-disabled="true" aria-label="YouTube（準備中）" title="YouTube（準備中）">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="icon-link" role="link" aria-disabled="true" aria-label="オンラインショップ（準備中）" title="オンラインショップ（準備中）">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h3l2.5 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+        </span>
+        <a class="icon-link" href="https://game.botanicbomb.jp/" aria-label="ボタボムバッジゲームへ" title="ボタボムバッジゲーム">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 7h9c2 0 3 1.5 3.5 3.5l1 5c.5 2.5-1.8 3.8-3.5 2L15 15H9l-2.5 2.5c-1.7 1.8-4 .5-3.5-2l1-5C4.5 8.5 5.5 7 7.5 7Z"/><path d="M7 10v4m-2-2h4"/><circle cx="16" cy="10.5" r=".75" fill="currentColor" stroke="none"/><circle cx="18" cy="13" r=".75" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </nav>
     </div>
     <footer>© BOTANICBOMB</footer>
   </main>
